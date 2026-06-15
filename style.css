@@ -1,0 +1,171 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(139, 69, 19);
+    justify-content: space-between;
+}
+
+.container img {
+    box-shadow: 0 10px 15px rgba(40, 31, 5, 0.971);
+}
+
+img {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+img {
+    max-width: 100%;
+    /* image never exceeds its container */
+    height: auto;
+    /* keeps correct proportions */
+    border-radius: 8px;
+    /* optional: rounded corners */
+}
+
+.container,
+.blame,
+.form,
+.dance {
+    display: flex;
+    flex-wrap: wrap;
+    /* allows wrapping to next line */
+    gap: 10px;
+    /* spacing between images */
+    justify-content: center;
+}
+
+
+.left {
+    margin-left: 20px;
+}
+
+.bday {
+    font-size: 150px;
+    animation: colorChange 4s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: blue;
+    }
+
+    25% {
+        color: rgb(111, 0, 255);
+    }
+
+    50% {
+        color: rgb(0, 251, 255);
+    }
+
+    75% {
+        color: rgb(255, 247, 0);
+    }
+
+    100% {
+        color: rgb(255, 0, 225);
+    }
+}
+
+h3 {
+    font-size: 50px;
+    color: rgb(241, 222, 208);
+}
+
+.d1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.d1 img {
+    width: 200px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 30px 50px 30px 0;
+}
+
+.journ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.journ img {
+    width: 250px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 30px 30px 30px 30px;
+}
+
+.blame {
+    color: rgb(139, 73, 26);
+    background-color: rgb(241, 222, 208);
+}
+
+.bla {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bla img {
+    width: 300px;
+}
+
+.form {
+    background-color: rgb(139, 69, 19);
+    color: rgb(241, 222, 208);
+}
+
+.formal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formal img {
+    width: 250px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 30px 30px 30px 30px;
+}
+
+.el {
+    display: flex;
+    justify-content: space-around;
+}
+
+.el img {
+    width: 300px;
+}
+
+.dance {
+    background-color: rgb(139, 69, 19);
+    color: rgb(241, 222, 208);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p {
+    font-size: 20px;
+}
+
+.formale {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formale img {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 30px 30px 30px 30px;
+}
+
+#p {
+    font-size: 70px;
+}
