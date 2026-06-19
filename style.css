@@ -18,11 +18,8 @@ img {
 
 img {
     max-width: 100%;
-    /* image never exceeds its container */
     height: auto;
-    /* keeps correct proportions */
     border-radius: 8px;
-    /* optional: rounded corners */
 }
 
 .container,
@@ -31,9 +28,7 @@ img {
 .dance {
     display: flex;
     flex-wrap: wrap;
-    /* allows wrapping to next line */
     gap: 10px;
-    /* spacing between images */
     justify-content: center;
 }
 

@@ -245,6 +245,20 @@
         <p id="p" class="bday">Happy Birthday vatete </p>
     </div>
 
+    <audio id="scroll-sound">
+        <source src="music/scroll.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        const audio = document.getElementById("scroll-sound");
+        window.addEventListener("scroll", () => {
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+    </script>
+
+
 </body>
 
 </html>
