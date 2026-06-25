@@ -164,3 +164,10 @@ p {
 #p {
     font-size: 70px;
 }
+
+@media (max-width: 768px) {
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
