@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bday</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.2.0/dist/confetti.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +20,7 @@
             <h1 class="bday">22</h1>
             <h3>Happy Birthday Vimbai</h3>
         </div>
-        <img src="pics/v1.jpeg">
+        <img class="fimg" src="pics/v1.jpeg">
     </div>
 
     <div class="blame">
@@ -91,8 +97,11 @@
         </div>
         <p>The outfits dzatakapfeka during presentations since first year<br>
             That IP presentation, vaskana vakazongobuda mulecture kwakutodzoka vanhu varova magogi<br>
+            <em>I come in here, ths was the day we met, do you remember, i do, because you made it memorable, i hae
+                pictures and ideos of the whole thing</em><br>
             Not forgetting mukomana akatipa madoughnuts ecoconut of all flavors<br>
             Day rekuRainbow Towers vaskana vakanoisa makeup mumota yaifambira muroad yakazara mapotholes<br>
+            <em>You made sure w didnt walk with heavy luggage all over the place</em><br>
             And the breakfast vasikana vakachena like hell
         </p>
     </div>
@@ -104,7 +113,8 @@
         </div>
         <p>
             Tofa nekusadairwa. Kana isiri emergency tinongosiiwa takadaro<br>
-            Ndini ndinofa nekuudza vanhu kuti Vimbai haatodairi maWhatsApp messages evanhu vese
+            Ndini ndinofa nekuudza vanhu kuti Vimbai haatodairi maWhatsApp messages evanhu vese <br>
+            <em>Especially stewie,iyeye anotonetsa zvekudaro, he always asks why</em>
         </p>
     </div>
 
@@ -242,7 +252,33 @@
             <img src="pics/v121.jpg">
             <img src="pics/v122.jpg">
         </div>
+
         <p id="p" class="bday">Happy Birthday vatete </p>
+
+        <p>
+            Just l <em>i</em>ke in most of these pi<em>c</em>tur<em>e</em>, I have been there—at the back, in the front,
+            or
+            behind the
+            camera.
+            Sometimes
+            ndichiramba kutorwa 🤣💔 ndofoswa kusvika ndabvuma. And honestly, to me, I realize that it's you trying to
+            make sure I
+            remember the day. That is one of the things I appreciate about you: you don't allow me to forget any moment
+            of me in
+            college.And you don't only take pictures, you create amazing moments for me. I heard long back that you were
+            the project
+            manager on my birthday, and we more than enjoyed ourselves! That was a special birthday for me. I'm thankful
+            for that
+            day. I'm also more thankful for that day you asked me to record you as you presented; I got my very first,
+            undeserved
+            friend and from then onwards, I met more amazing people through you. I'm talking Shalin, Christopher, Pastor
+            Innocent,
+            Kim, and nhasi takwira mota... thats more friends than I had.
+
+            Vimbai. thank you, i appreciate everything that you have done
+        </p>
+
+        <p id="p" class="bday">Happy Belated Birthday vatete Viwa wano.... ndozorohwa</p>
     </div>
 
     <audio id="scroll-sound">
@@ -250,10 +286,21 @@
     </audio>
 
     <script>
+        window.addEventListener("click", (event) => {
+            confetti({ position: { x: event.clientX, y: event.clientY } });
+        });
+    </script>
+
+    <script>
+
+        document.onload(
+            confetti()
+
+        )
         const audio = document.getElementById("scroll-sound");
         window.addEventListener("scroll", () => {
             if (audio.paused) {
-                audio.play();
+
             }
         });
     </script>
