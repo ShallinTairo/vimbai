@@ -10,17 +10,28 @@ body {
   margin: 0;
 }
 
-.container {
+.topcontainer {
   display: flex;
-  flex-direction: row;
   background-color: rgb(139, 69, 19);
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
+  span {
+    color: aliceblue;
+  }
+  img {
+    width: clamp(40%, 45% - 20vw, 48%);
+    margin-bottom: 8px;
+    box-shadow: 0 10px 15px rgba(40, 31, 5, 0.971);
+    aspect-ratio: 4/6;
+  }
 }
 
 .container img {
-  width: clamp(60%, 105% - 20vw, 90%);
+  width: clamp(45%, 55% - 20vw, 50%);
   margin-bottom: 8px;
   box-shadow: 0 10px 15px rgba(40, 31, 5, 0.971);
+  aspect-ratio: 4/6;
 }
 
 img {
@@ -42,13 +53,19 @@ img {
 }
 
 .left {
-  margin-left: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  .span {
+    font-weight: 800;
+  }
 }
 
 .bday {
-  font-size: 150px;
+  font-size: clamp(2rem, 10vw, 150px); /* scales with screen size */
   animation: colorChange 4s infinite;
   font-weight: 900;
+  text-align: center; /* keeps it centered */
 }
 
 @keyframes colorChange {
@@ -92,16 +109,19 @@ h3 {
 }
 
 .journ {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 180px;
+  gap: 8px;
+  grid-auto-flow: dense;
+  width: 100%;
 }
 
 .journ img {
-  width: 250px;
-  height: 400px;
-  border-radius: 10px;
-  margin: 30px 30px 30px 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps images neat without distortion */
+  border-radius: 4px; /* optional: adds a subtle rounded corner */
 }
 
 .blame {
@@ -111,11 +131,15 @@ h3 {
 
 .bla {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 }
 
 .bla img {
-  width: 100%;
+  width: 48%; /* fixed width */
+  object-fit: contain; /* crops neatly without distortion */
+  border-radius: 12px; /* optional: rounded edges like a phone */
 }
 
 .form {
@@ -124,24 +148,45 @@ h3 {
 }
 
 .formal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+  width: 100%;
 }
 
 .formal img {
-  width: 250px;
-  height: 400px;
-  border-radius: 10px;
-  margin: 30px 30px 30px 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+.vertical {
+  grid-row: span 2;
+}
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.el {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+  width: 100%;
 }
 
 .el img {
   width: 100%;
-  aspect-ratio: 9/20;
-  margin-bottom: 10px;
+  height: 100%;
+  object-fit: cover; /* keeps full image inside cell */
+  aspect-ratio: 4 / 6; /* portrait-like ratio */
 }
-
 .dance {
   background-color: rgb(139, 69, 19);
   color: rgb(241, 222, 208);
